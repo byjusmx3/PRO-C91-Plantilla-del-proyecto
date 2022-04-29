@@ -55,7 +55,7 @@ export default class DailyPicScreen extends Component {
 
     renderVideo = () => {
         <TouchableOpacity style={styles.listContainer}
-            onPress={() => Linking.openURL(this.state.apod.url).catch(err => console.error("Couldn't load page", err))}
+            onPress={() => Linking.openURL(this.state.apod.url).catch(err => console.error("No se pudo cargar la página", err))}
         >
             <View style={styles.iconContainer}>
                 <Image source={require("../assets/play-video.png")} style={{ width: 50, height: 50 }}></Image>
@@ -83,7 +83,7 @@ export default class DailyPicScreen extends Component {
                         </View>
                         <ScrollView style={styles.listContainer}>
                             <TouchableOpacity
-                                onPress={() => Linking.openURL(this.state.apod.url).catch(err => console.error("Couldn't load page", err))}
+                                onPress={() => Linking.openURL(this.state.apod.url).catch(err => console.error("No se pudo cargar la página", err))}
                             >
                                 <Image source={{ "uri": url }} style={{ width: "100%", height: 300, borderRadius: 10 }}></Image>
                             </TouchableOpacity >
